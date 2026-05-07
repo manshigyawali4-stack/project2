@@ -1,4 +1,8 @@
-
+:root{
+    --primary-color: black;
+    --color: white;
+    --secondary-color: #A87A2A;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,9 +13,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 nav{
-    background: black;
-    padding: 20px 0;
-    color: white;
+    background-color: var(--primary-color);
 }
 .navigation{
     width: 90%;
@@ -36,12 +38,65 @@ nav{
     font-weight: 600;
     text-transform: capitalize;
 }
-.consultant{
+.consultant_button{
+    
+    color: rgb(241, 235, 235);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.consultant_button{
     display: flex;
     align-items: center;
-    gap: 20px;
+        gap:20px
+
 }
-.consultant button{
-    background: white;
-    color: black;
+.consultant_button .button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color:var(--color white);
+    position: relative;
+    overflow: clip;
+    transition: all 0.3s ease-in-out    ;
+    
 }
+.consultant_button .button .button_text{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.consultant_button .button .hov_button{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(255, 64, 64);
+    content: "";
+    contain:"";
+
+}
+@media (max-width: 768px){
+     .navigation{
+        padding: 10px 0px;
+     }
+     .logo img{
+        height: 30px;
+     }
+     .nav_items{
+        display: none;
+     }
+     .consultant_button{
+        display: none;
+     }
+     .menu{
+        display:block;
+        color:var(--color-white);
+        cursor: pointer;
+
+     }
+    }
